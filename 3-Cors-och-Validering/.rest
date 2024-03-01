@@ -1,0 +1,12 @@
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+    "username": "freakyfreddie",
+    "email": "freddie@mail.se",
+    "password": "12345678",
+    "confirmPassword": "12345678",
+    "address": {"street": "kfjdklf"},
+    "hobbies": ["fdf", "dfdf", "fdfd"],
+    "dateOfBirth": "1999-02-02"
+}
