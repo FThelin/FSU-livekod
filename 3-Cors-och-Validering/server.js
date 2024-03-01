@@ -11,6 +11,14 @@ app.use(express.json())
 const users = []
 
 app.post("/api/users/register", validate(registerSchema), (req, res) => {
+
+    //**** Kommentera in denna kod om ni inte vill använda egenskriven middleware "validate" ovan ****/
+    // const { error } = registerSchema.validate(req.body, { abortEarly: false })
+
+    // if (error) {
+    //     return res.status(400).json(error)
+    // }
+
     users.push(req.body)
     res.status(201).json(users)
 })
