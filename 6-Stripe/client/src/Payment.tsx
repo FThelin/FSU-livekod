@@ -18,6 +18,7 @@ const Payment = () => {
             ])
         })
         const data = await response.json()
+        localStorage.setItem("sessionId", JSON.stringify(data.sessionId))
         window.location = data.url
     }
 
